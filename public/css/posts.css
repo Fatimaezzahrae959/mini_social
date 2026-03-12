@@ -1,0 +1,175 @@
+/* BODY */
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f2f5;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#1877f2;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar h2{
+    font-size:24px;
+}
+
+.logout{
+    background:white;
+    color:#1877f2;
+    padding:8px 15px;
+    border-radius:8px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.logout:hover{
+    background:#f0f2f5;
+}
+
+/* CONTAINER */
+.container{
+    width:600px;
+    margin:auto;
+    margin-top:30px;
+}
+
+/* POST FORM */
+.post-form{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+    transition:0.3s;
+}
+
+.post-form:hover{
+    transform:scale(1.01);
+}
+
+textarea{
+    width:100%;
+    border:none;
+    resize:none;
+    font-size:16px;
+    outline:none;
+    height:80px;
+    padding:10px;
+    border-radius:10px;
+    background:#f0f2f5;
+}
+
+.post-btn{
+    background:#1877f2;
+    border:none;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.post-btn:hover{
+    background:#145ecf;
+}
+
+/* POST CARD */
+.post{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.post:hover{
+    transform:scale(1.02);
+}
+
+/* POST USER */
+.post-user{
+    font-weight:bold;
+    margin-bottom:8px;
+    font-size:16px;
+    color:#333;
+}
+
+/* POST CONTENT */
+.post-content{
+    font-size:16px;
+    margin-bottom:15px;
+    color:#444;
+}
+
+/* ACTIONS */
+.actions{
+    display:flex;
+    justify-content:flex-start;
+    gap:15px;
+    align-items:center;
+}
+
+/* LIKE BUTTON */
+.like-btn{
+    background:#e4e6eb;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.like-btn:hover{
+    background:#d8dadf;
+    transform:scale(1.05);
+}
+
+.edit-btn{
+    text-decoration:none;
+    color:white;
+    background: rgba(55, 179, 105, 0.756);
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.edit-btn:hover{
+    background: #1b8644;
+    transform:scale(1.05);
+}
+/* DELETE BUTTON */
+.delete-btn{
+    background:#ff4d4d;
+    border:none;
+    color:white;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+
+.delete-btn:hover{
+    background:#e60000;
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:650px){
+    .container{
+        width:90%;
+    }
+}

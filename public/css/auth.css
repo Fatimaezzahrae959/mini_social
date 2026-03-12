@@ -1,0 +1,106 @@
+body{
+
+margin:0;
+padding:0;
+height:100vh;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#667eea,#764ba2);
+
+}
+
+/* centrer le formulaire */
+
+.auth-container{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+/* carte */
+
+.auth-card{
+
+background:white;
+padding:40px;
+width:380px;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.2);
+
+}
+
+/* inputs */
+
+.custom-input{
+
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+
+}
+
+.custom-input:focus{
+
+border-color:#764ba2;
+box-shadow:none;
+
+}
+
+/* bouton connexion */
+
+.login-btn{
+
+background:#764ba2;
+border:none;
+padding:12px;
+border-radius:10px;
+color:white;
+font-weight:bold;
+
+}
+
+.login-btn:hover{
+
+background:#764ba271;
+color: white;
+
+
+}
+
+/* bouton inscription */
+
+.register-btn{
+
+background:#764ba2;
+border:none;
+padding:12px;
+border-radius:10px;
+color:white;
+font-weight:bold;
+
+}
+
+.register-btn:hover{
+
+background:#764ba271;
+color: white;
+
+}
+
+/* lien */
+
+a{
+
+color:#764ba2;
+font-weight:bold;
+text-decoration:none;
+
+}
+
+a:hover{
+
+text-decoration:underline;
+
+}
