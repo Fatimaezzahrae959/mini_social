@@ -17,10 +17,19 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        Post::create([
+        $post = Post::create([
             'content' => $request->content,
             'user_id' => session('user_id')
         ]);
+
+        // Si c'est AJAX, on renvoie JSON
+        if ($request->ajax()) {
+            return response()->json([
+                'id' => $post->id,
+                'content' => $post->content,
+                'user_name' => session('user_name')
+            ]);
+        }
 
         return back();
     }
@@ -53,16 +62,23 @@ class PostController extends Controller
 
         return redirect('/posts')->with('success', 'Post modifié avec succès');
     }
-    public function destroy($id)
+    public function destroy($id, Request $request)
     {
-        $post = \App\Models\Post::find($id);
+        $post = Post::find($id);
 
-        // Check si user connecté howa propriétaire
         if (!$post || session('user_id') != $post->user_id) {
+            if ($request->ajax()) {
+                return response()->json(['error' => 'Unauthorized'], 403);
+            }
             return back()->with('error', 'Vous ne pouvez pas supprimer ce post');
         }
 
         $post->delete();
+
+        if ($request->ajax()) {
+            return response()->json(['success' => true]);
+        }
+
         return back()->with('success', 'Post supprimé avec succès');
     }
 }

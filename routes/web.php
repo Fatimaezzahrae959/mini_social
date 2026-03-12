@@ -31,6 +31,5 @@ Route::middleware('checkauth')->group(function () {
     Route::get('/post/{id}/edit', [PostController::class, 'edit']);
     Route::put('/post/{id}', [PostController::class, 'update']); // <-- ici PUT
 
-    Route::post('/like/{id}', [LikeController::class, 'like']);
-
+    Route::post('/like/{id}', [LikeController::class, 'like'])->middleware('checkauth');
 });
