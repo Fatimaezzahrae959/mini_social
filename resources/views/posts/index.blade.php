@@ -10,9 +10,7 @@
 </head>
 
 <body>
-    <audio id="notifSound">
-        <source src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3">
-    </audio>
+
     <!-- NAVBAR -->
     <div class="navbar">
         <h2><i class="fab fa-facebook-messenger"></i> Mini Social</h2>
@@ -95,6 +93,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         $(function () {
 
@@ -143,7 +142,7 @@
 
                         toastr.success("Post ajouté avec succès");
 
-                        document.getElementById("notifSound").play();
+
                     },
 
                     error: function () {
@@ -191,7 +190,7 @@
                         $('#post-' + id).remove();
 
                         toastr.error("Post supprimé !");
-                        document.getElementById("notifSound").play();
+
                     }
                 });
             });
@@ -199,16 +198,9 @@
         });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     @if(session('success'))
         <script>
             toastr.success("{{ session('success') }}");
-            document.getElementById("notifSound").play();
         </script>
     @endif
 </body>
