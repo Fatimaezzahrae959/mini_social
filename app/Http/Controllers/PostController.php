@@ -47,7 +47,7 @@ class PostController extends Controller
 
     public function update(Request $request, $id)
     {
-        $post = \App\Models\Post::find($id);
+        $post = Post::find($id);
 
         if (!$post || session('user_id') != $post->user_id) {
             return back()->with('error', 'Vous ne pouvez pas modifier ce post');
